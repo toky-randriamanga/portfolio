@@ -1,0 +1,11 @@
+$primary: #ff4f19;
+$secondary: #262b38;
+$success: #28a745;
+$info:#4682b4;
+
+@import "~bootstrap/scss/bootstrap";
+
+.container {
+    text-align: right;
+    background-color: #28a745;
+}

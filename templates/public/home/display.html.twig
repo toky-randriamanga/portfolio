@@ -1,0 +1,68 @@
+{% extends "/public/main.html.twig" %}
+
+{% block content %}
+<div class="home">
+    <div class="">
+        <div class="mb-3">
+            <h1 class="title">Tokiniaina RANDRIAMANGA</h1>
+            <span class="fw-bold">Consultant Développeur</span>
+        </div>
+        <div class="desc fw-light">
+            <p class="">
+                Passionné par la transformation digitale, je me suis spécialisé pendant 5 années dans le développement web
+                afin de créer des solutions modernes et performantes qui répondent aux besoins actuels des utilisateurs.
+            </p>
+            <p>
+                Mes expériences professionnelles m'ont donné l'opportunité de me renforcer aussi bien techniquement que fonctionnellement.
+                En effet, à un moment donné je faisais partie d'un projet très technique et en ce moment je travaille sur des ERP qui nécessitent une vision plus fonctionnelle du métier.
+            </p>
+        </div>
+        <div class="section-tech">
+            <div class="mt-3">
+                <span class="h3 text-secondary">
+                    Mes technologies
+                </span>
+            </div>
+            <div class="">
+                <div class="d-flex align-items-center mt-3">
+                    <div class="m-3 ms-0 text-center">
+                        Backend
+                    </div>
+                    <div class="m-3 text-center">
+                        <img src="{{ asset('images/php.png') }}" alt="" class="techno-logo">
+                        <span>PHP</span>
+                    </div>
+                    <div class="m-3 text-center">
+                        <img src="{{ asset('images/symfony.png') }}" alt="" class="techno-logo">
+                        <span>Symfony</span>
+                    </div>
+                    <div class="m-3 text-center">
+                        <img src="{{ asset('images/sql.png') }}" alt="" class="techno-logo">
+                        <span>SQL</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                    <div class="m-3 ms-0 text-center">
+                        Frontend
+                    </div>
+                    <div class="m-3 text-center">
+                        <img src="{{ asset('images/html.png') }}" alt="" class="techno-logo">
+                        <span>HTML</span>
+                    </div><div class="m-3 text-center">
+                        <img src="{{ asset('images/css.png') }}" alt="" class="techno-logo">
+                        <span>CSS</span>
+                    </div>
+                    <div class="m-3 text-center">
+                        <img src="{{ asset('images/javascript.png') }}" alt="" class="techno-logo">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="m-3 text-center">
+                        <img src="{{ asset('images/react.png') }}" alt="" class="techno-logo">
+                        <span class="">ReactJS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
