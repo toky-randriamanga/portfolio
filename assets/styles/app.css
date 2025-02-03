@@ -1,9 +1,9 @@
 :root {
-    --bs-primary: #040f27;  /* Nouvelle couleur principale */
-    --bs-primary-rgb: 4, 15, 39;  /* Nouvelle couleur principale */
+    --bs-primary: #040f27; /* Nouvelle couleur principale */
+    --bs-primary-rgb: 4, 15, 39;
     --bs-secondary: #00f7ff; /* Nouvelle couleur secondaire */
-    --bs-secondary-rgb: 0, 247, 255; /* Nouvelle couleur secondaire */
-    --bs-success: #28a745;   /* Nouvelle couleur success */
+    --bs-secondary-rgb: 0, 247, 255;
+    --bs-success: #28a745;
 }
 
 @import "@fontsource/poppins/index.css";
@@ -11,82 +11,101 @@
 body {
     background-color: var(--bs-primary);
     color: #ebebec;
-    /* font-family: 'Poppins', sans-serif; */
     font-size: 0.98rem;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 .mt-4 {
-    margin-top: 1.5rem!important;
+    margin-top: 1.5rem !important;
 }
 
 .mt-5 {
-    margin-top: 2rem!important;
+    margin-top: 2rem !important;
 }
 
 .navbar {
-    width: 90%;
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
     background-color: var(--bs-primary);
-    color: #ebebec!important;
+    color: #ebebec !important;
 }
+
 .navbar .nav-link {
     color: #ebebec;
     margin: 0 10px;
 }
+
 .navbar .nav-link.active {
     color: var(--bs-secondary);
 }
 
 .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
     padding-top: 100px;
 }
 
+/* ✅ Meilleure gestion de la section home */
 .container .home {
     display: flex;
-    margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    /* align-items: center; */
-    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh; /* ✅ Meilleure prise en charge sur mobile */
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
+/* ✅ Ajustement des titres */
 .home .title {
-    font-size: 3.0em;
+    font-size: clamp(2rem, 5vw, 3rem);
     color: var(--bs-secondary);
+    text-align: center;
 }
 
 .home .desc {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: justify;
-
+    max-width: 800px;
 }
 
+/* ✅ Ajustement des logos */
 .home .techno-logo {
-    display: block;
-    width: 50px;
-    height: 50px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
     margin-bottom: 10px;
 }
 
 .home .section-tech {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
+/* ✅ Adaptation des cartes de projets */
 .project-card {
-    border : 1px solid var(--bs-secondary);
+    border: 1px solid var(--bs-secondary);
     border-radius: 5px;
     padding: 10px;
-    margin: 5px 1%;
-    width: 33%;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 400px;
 }
 
+/* ✅ Expérience : Adaptation des bordures */
 .exp-card {
-    padding-left: 25px;
-    border-left: 1px solid var(--bs-secondary);
+    padding-left: 15px;
+    border-left: 2px solid var(--bs-secondary);
 }
 
+/* ✅ Formulaire de contact adapté */
 .contact-form {
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
 }
 
 .contact-info {
@@ -94,25 +113,23 @@ body {
     padding: 1rem;
 }
 
+/* ✅ Responsive : Adaptation pour les petits écrans */
 @media (max-width: 991px) {
     .container {
-        width: 100%!important;
-        padding: 1rem;
-        padding-top: 100px;
-    }
-
-    .container .home {
-        display: flex;
-        margin: auto;
-        height: 100vh;
-    }
-
-    .contact-form {
         width: 100%;
+        padding: 1.5rem;
+        padding-top: 80px;
     }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .contact-form,
     .contact-info {
-        margin: 1rem 0;
-        padding: 0;
+        width: 100%;
     }
 
     .navbar {
@@ -120,6 +137,7 @@ body {
     }
 
     .project-card {
-        min-width: 100%;
+        width: 100%;
+        max-width: none;
     }
 }
